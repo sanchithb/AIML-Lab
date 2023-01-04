@@ -1,5 +1,6 @@
 import numpy as np 
 X=np.array(([2,9],[1,5],[3,6]),dtype=float)
+y=np.array(([.92],[.86],[.89]))
 X =X/np.amax(X, axis=0)
 y= y/100
 
@@ -21,6 +22,7 @@ weight_o = np.random.uniform(size=(neurons_h, neurons_o))
 bias_o= np.random.uniform(size=(1,neurons_o))
 
 for i in range(epoch):
+    
     inp_h = np.dot(X, weight_h) + bias_h 
     out_h = sigmoid(inp_h)
     
